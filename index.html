@@ -1,0 +1,383 @@
+!DOCTYPE html
+html lang=es
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleArsun Electric & Telecom, C.A.title
+    style
+         Variables de Color Corporativo 
+        root {
+            --morado-principal #4a154b;
+            --morado-secundario #6b46c1;
+            --morado-claro #faf5ff;
+            --oscuro #2d3748;
+            --gris-texto #4a5568;
+            --blanco #ffffff;
+        }
+
+         Estilos Globales 
+         {
+            margin 0;
+            padding 0;
+            box-sizing border-box;
+            font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color var(--oscuro);
+            line-height 1.6;
+            background-color var(--blanco);
+        }
+
+         Encabezado y Navegación 
+        header {
+            background-color var(--morado-principal);
+            color var(--blanco);
+            position fixed;
+            width 100%;
+            top 0;
+            left 0;
+            z-index 1000;
+            box-shadow 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width 1200px;
+            margin 0 auto;
+            display flex;
+            justify-content space-between;
+            align-items center;
+            padding 15px 20px;
+        }
+
+        .logo {
+            font-size 20px;
+            font-weight bold;
+            letter-spacing 0.5px;
+        }
+
+        .logo span {
+            color #d6bcfa;
+        }
+
+        nav ul {
+            display flex;
+            list-style none;
+        }
+
+        nav ul li {
+            margin-left 25px;
+        }
+
+        nav ul li a {
+            color var(--blanco);
+            text-decoration none;
+            font-size 15px;
+            font-weight 500;
+            transition color 0.3s;
+        }
+
+        nav ul li ahover {
+            color #d6bcfa;
+        }
+
+         Sección Principal (Hero) 
+        .hero {
+            background linear-gradient(135deg, var(--morado-principal) 0%, var(--morado-secundario) 100%);
+            color var(--blanco);
+            padding 160px 20px 100px 20px;
+            text-align center;
+        }
+
+        .hero-content {
+            max-width 800px;
+            margin 0 auto;
+        }
+
+        .hero h1 {
+            font-size 42px;
+            margin-bottom 20px;
+            line-height 1.2;
+        }
+
+        .hero p {
+            font-size 18px;
+            margin-bottom 30px;
+            color #e9d8fd;
+        }
+
+        .btn-primario {
+            display inline-block;
+            background-color var(--blanco);
+            color var(--morado-principal);
+            padding 12px 30px;
+            border-radius 5px;
+            text-decoration none;
+            font-weight bold;
+            transition transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-primariohover {
+            transform translateY(-2px);
+            background-color #f7fafc;
+        }
+
+         Secciones Comunes 
+        section {
+            padding 80px 20px;
+        }
+
+        .section-title {
+            text-align center;
+            font-size 32px;
+            color var(--morado-principal);
+            margin-bottom 50px;
+            position relative;
+        }
+
+        .section-titleafter {
+            content '';
+            display block;
+            width 60px;
+            height 3px;
+            background-color var(--morado-secundario);
+            margin 10px auto 0 auto;
+        }
+
+         Quiénes Somos 
+        .about-container {
+            max-width 900px;
+            margin 0 auto;
+            text-align center;
+            font-size 17px;
+            color var(--gris-texto);
+        }
+
+         Servicios 
+        .services-grid {
+            max-width 1200px;
+            margin 0 auto;
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(300px, 1fr));
+            gap 30px;
+        }
+
+        .service-card {
+            background-color var(--blanco);
+            border 1px solid #e2e8f0;
+            border-radius 8px;
+            padding 30px;
+            box-shadow 0 4px 6px rgba(0,0,0,0.05);
+            transition transform 0.3s, border-color 0.3s;
+        }
+
+        .service-cardhover {
+            transform translateY(-5px);
+            border-color var(--morado-secundario);
+        }
+
+        .service-icon {
+            font-size 40px;
+            color var(--morado-secundario);
+            margin-bottom 20px;
+        }
+
+        .service-card h3 {
+            font-size 20px;
+            color var(--morado-principal);
+            margin-bottom 15px;
+        }
+
+        .service-card p {
+            color var(--gris-texto);
+            font-size 15px;
+        }
+
+         Aliados y Experiencia 
+        .experiencia {
+            background-color var(--morado-claro);
+        }
+
+        .aliados-container {
+            max-width 1000px;
+            margin 0 auto;
+            text-align center;
+        }
+
+        .aliados-text {
+            font-size 18px;
+            margin-bottom 40px;
+            color var(--gris-texto);
+        }
+
+        .aliados-grid {
+            display flex;
+            justify-content center;
+            gap 40px;
+            flex-wrap wrap;
+        }
+
+        .aliado-item {
+            background var(--blanco);
+            padding 15px 30px;
+            border-radius 6px;
+            font-weight bold;
+            color var(--morado-principal);
+            box-shadow 0 2px 4px rgba(0,0,0,0.05);
+            border 1px solid #e2e8f0;
+        }
+
+         Contacto 
+        .contact-container {
+            max-width 600px;
+            margin 0 auto;
+            text-align center;
+        }
+
+        .contact-info {
+            margin-bottom 40px;
+            font-size 18px;
+        }
+
+        .contact-info p {
+            margin-bottom 10px;
+        }
+
+        .btn-whatsapp {
+            display inline-block;
+            background-color #25d366;
+            color var(--blanco);
+            padding 15px 35px;
+            border-radius 5px;
+            text-decoration none;
+            font-weight bold;
+            font-size 17px;
+            transition transform 0.3s, background-color 0.3s;
+            box-shadow 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapphover {
+            transform translateY(-2px);
+            background-color #1ebd58;
+        }
+
+         Pie de Página 
+        footer {
+            background-color var(--morado-principal);
+            color var(--blanco);
+            text-align center;
+            padding 30px 20px;
+            font-size 14px;
+            border-top 3px solid var(--morado-secundario);
+        }
+
+         Responsivo 
+        @media (max-width 768px) {
+            .nav-container {
+                flex-direction column;
+                gap 15px;
+            }
+            nav ul li {
+                margin 0 10px;
+            }
+            .hero h1 {
+                font-size 32px;
+            }
+        }
+    style
+head
+body
+
+    !-- Encabezado --
+    header
+        div class=nav-container
+            div class=logoARSUN spanELECTRICspandiv
+            nav
+                ul
+                    lia href=#inicioInicioali
+                    lia href=#nosotrosNosotrosali
+                    lia href=#serviciosServiciosali
+                    lia href=#experienciaExperienciaali
+                    lia href=#contactoContactoali
+                ul
+            nav
+        div
+    header
+
+    !-- Sección Inicio --
+    section id=inicio class=hero
+        div class=hero-content
+            h1Soluciones Integrales en Ingeniería Eléctrica Industrial y Telecomunicacionesh1
+            pGarantizando la continuidad operativo-energética de la industria mediante proyectos de infraestructura de alta exigencia técnica.p
+            a href=#contacto class=btn-primarioCotizar Proyectoa
+        div
+    section
+
+    !-- Sección Nosotros --
+    section id=nosotros
+        div class=about-container
+            h2 class=section-titleQuiénes Somosh2
+            pstrongArsun Electric & Telecom, C.A.strong es una empresa especializada en el desarrollo, ejecución y mantenimiento de sistemas eléctricos de potencia e infraestructura de telecomunicaciones a nivel industrial. Nos enfocamos en ofrecer soluciones con el más alto rigor de ingeniería, asegurando el cumplimiento de normativas nacionales e internacionales para la protección y optimización de activos industriales.p
+        div
+    section
+
+    !-- Sección Servicios --
+    section id=servicios
+        h2 class=section-titleNuestros Serviciosh2
+        div class=services-grid
+            div class=service-card
+                div class=service-icon?div
+                h3Sistemas de Potencia e Industrialh3
+                pInstalación, diagnóstico y mantenimiento de sistemas eléctricos industriales, motores eléctricos, variadores de frecuencia y tableros de distribución.p
+            div
+            div class=service-card
+                div class=service-icon??div
+                h3Sistemas de Generaciónh3
+                pMantenimiento preventivo y correctivo de grupos electrógenos de respaldo (Kohler, Detroit Diesel, Perkins) para garantizar la continuidad energética crítica.p
+            div
+            div class=service-card
+                div class=service-icon??div
+                h3Telecomunicacionesh3
+                pEstructuración e instalación de sistemas e infraestructura de telecomunicaciones para redes corporativas y comerciales.p
+            div
+            div class=service-card
+                div class=service-icon??div
+                h3Sistemas de Puesta a Tierrah3
+                pDiseño, medición y adecuación de mallas de tierra para la protección de equipos sensibles y personal operativo.p
+            div
+        div
+    section
+
+    !-- Sección Experiencia --
+    section id=experiencia class=experiencia
+        div class=aliados-container
+            h2 class=section-titleExperiencia Corporativah2
+            p class=aliados-textHemos ejecutado proyectos y colaboraciones estratégicas con grandes corporaciones del sector de las telecomunicaciones en el paísp
+            div class=aliados-grid
+                div class=aliado-itemDIGITELdiv
+                div class=aliado-itemMOVISTARdiv
+                div class=aliado-itemCANTVdiv
+            div
+        div
+    section
+
+    !-- Sección Contacto --
+    section id=contacto
+        div class=contact-container
+            h2 class=section-titleContacto Operacionalh2
+            div class=contact-info
+                pstrongDirector de Operacionesstrong Ing. Carlos Torop
+                pstrongUbicación Corporativastrong Anzoátegui, Venezuelap
+            div
+            p style=margin-bottom 25px; color var(--gris-texto);¿Requieres una cotización formal o ingeniería de detalle para tu planta o proyecto Contáctanos de forma inmediata vía WhatsAppp
+            a href=httpswa.me584147946886 class=btn-whatsapp target=_blank?? Contactar por WhatsAppa
+        div
+    section
+
+    !-- Pie de Página --
+    footer
+        p&copy; 2026 Arsun Electric & Telecom, C.A. RIF J-50046297-2. Todos los derechos reservados.p
+    footer
+
+body
+html
